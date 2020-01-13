@@ -64,4 +64,9 @@ app.on('ready', () => {
   setAppMenu(mainWindow);
   tray = new AppTray(trayIconPath, mainWindow);
 
+// Load and Create MainWindow
+function loadAppWindows(showLoader) {
+
+  // Set path for main URL
+  let appPath = c.settings.appUrl;
 });
