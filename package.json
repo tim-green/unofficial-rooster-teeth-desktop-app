@@ -1,0 +1,102 @@
+{
+  "name": "rooster-teeth-unofficial-desktop-app",
+  "productName": "Rooster Teeth Unofficial App",
+  "description": "Unofficial Desktop App for Rooster Teeth",
+  "repository": "https://github.com/tim-green/unofficial-rooster-teeth-desktop-app",
+  "version": "0.0.1",
+  "license": "GPL-3.0-only",
+  "author": {
+    "name": "Tim Green",
+    "email": "github@timgreen.ws"
+  },
+  "main": "main.js",
+  "scripts": {
+    "test": "jshint main.js",
+    "electron": "electron .",
+    "start": "./node_modules/.bin/electron .",
+    "icon-gen": "electron-icon-maker --input=./src/res/images/icon_1024.png --output=./build",
+    "generate": "yarn icon-gen",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "build": "./node_modules/.bin/electron-builder build",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "devDependencies": {
+    "electron": "^7.1.8",
+    "electron-builder": "^21.2.0",
+    "electron-icon-maker": "0.0.4",
+    "jshint": "^2.10.0"
+  },
+  "dependencies": {
+    "7zip-bin": "^5.0.3",
+    "ajv": "^6.10.2",
+    "electron-prefs": "^1.0.7",
+    "lint": "^1.1.2"
+  },
+  "files": [
+    "*.js",
+    "src",
+    "node_modules"
+  ],
+  "build": {
+    "appId": "com.timgreen.rtdpa",
+    "productName": "Rooster Teeth Unofficial App",
+    "copyright": "",
+    "mac": {
+      "category": "public.app-category.video",
+      "target": [
+        {
+          "target": "dmg"
+        },
+        {
+          "target": "mas"
+        }
+      ],
+      "icon": "build/icon.icns"
+    },
+    "dmg": {},
+    "mas": {},
+    "win": {
+      "target": [
+        {
+          "target": "nsis"
+        }
+      ],
+      "icon": "build/icon.ico",
+      "legalTrademarks": "",
+      "publisherName": ""
+    },
+    "nsis": {
+      "oneClick": false,
+      "runAfterFinish": false,
+      "allowElevation": true
+    },
+    "appx": {
+      "applicationId": "Rooster Teeth Unofficial App",
+      "backgroundColor": "#00aeef",
+      "displayName": "RoosterTeeth",
+      "identityName": "RoosterTeeth",
+      "publisher": "",
+      "publisherDisplayName": "TimGreen",
+      "languages": [
+        "en"
+      ]
+    },
+    "portable": {},
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage"
+        }
+      ],
+      "icon": "build/icons/png",
+      "maintainer": "timgreen",
+      "vendor": "timgreen",
+      "synopsis": "Rooster Teeth Unofficial App",
+      "category": "AudioVideo"
+    },
+    "appImage": {
+      "systemIntegration": "ask"
+    }
+  }
+}
