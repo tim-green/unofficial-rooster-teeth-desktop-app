@@ -1,3 +1,5 @@
 node_modules
 electron-quick-start
 .DS_Store
+dist
+rooster-teeth-unofficial-desktop-app-0.0.1.tgz
