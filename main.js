@@ -82,4 +82,18 @@ function loadAppWindows(showLoader) {
   // create mainWindow
   mainWindow = new MainWindow(appPath, appIconPath, !showLoader);
 
+  // minimize Listener
+  mainWindow.on('minimize', function(event) {
+      mainWindow.minimize();
+  });
+
+  // close to tray listener
+  mainWindow.on('close', function (event) {
+    if (!isQuitting) {
+      event.preventDefault();
+      mainWindow.hide();
+      event.returnValue = false;
+    }
+  });
+
 });
