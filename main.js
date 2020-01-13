@@ -64,6 +64,8 @@ app.on('ready', () => {
   setAppMenu(mainWindow);
   tray = new AppTray(trayIconPath, mainWindow);
 
+});
+
 // Load and Create MainWindow
 function loadAppWindows(showLoader) {
 
@@ -114,5 +116,25 @@ function loadAppWindows(showLoader) {
   });
 }
 
+
+// Listen for events fired in the mainWindow UI
+ipcMain.on('app:refresh', function(event) {
+
+  // hide offline window if applicable
+  if (offlineWindow && offlineWindow.isVisible()) {
+    offlineWindow.hide();
+  }
+
+  offlineWindow = null;
+
+  if (mainWindow) {
+    // mainWindow is hidden, refresh and show it directly
+    mainWindow.loadHome();
+    mainWindow.show();
+  } else {
+    // instantiate mainWindow additionally
+    mainWindow.loadHome();
+    loadAppWindows(false);
+  }
 
 });
