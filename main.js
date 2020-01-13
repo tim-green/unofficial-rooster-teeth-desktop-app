@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 // const declaration
 const path = require('path');
 const electron = require('electron');
@@ -63,6 +65,12 @@ app.on('ready', () => {
   // create MainWindow and tray
   setAppMenu(mainWindow);
   tray = new AppTray(trayIconPath, mainWindow);
+
+    /* create TouchBar for macOS
+  if (Helper.useTouchBar()) {
+    const setTouchBar = require('./app/touch_bar');
+    setTouchBar(mainWindow);
+  } */
 
 });
 
