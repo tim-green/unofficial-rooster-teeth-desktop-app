@@ -138,3 +138,28 @@ ipcMain.on('app:refresh', function(event) {
   }
 
 });
+
+// Shell listeners
+if (Helper.isUsingShell()) {
+  const resize = function(width, height) {
+    let bounds = mainWindow.getBounds();
+
+    const diffWidth = (width - bounds.width);
+    let newX = bounds.x - (diffWidth / 2);
+    if (newX < 0) {
+      newX = 0;
+    }
+    bounds.x = newX;
+    bounds.height = height;
+    bounds.width = width;
+
+    mainWindow.setBounds(bounds, true);
+  };
+
+  ipcMain.on('titlebar:small_view', function(event) {
+    resize(c.mainWindow.width, c.mainWindow.height);
+  });
+  ipcMain.on('titlebar:large_view', function(event) {
+    resize(c.mainWindow.largeWidth, c.mainWindow.largeHeight);
+  });
+}
