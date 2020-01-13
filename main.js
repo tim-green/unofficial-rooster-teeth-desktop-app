@@ -96,4 +96,15 @@ function loadAppWindows(showLoader) {
     }
   });
 
+  // show loader window only on first start
+  if (showLoader) {
+    spinnerWindow = new MainWindow(`file://${__dirname}/src/loader.html`, appIconPath);
+    // hide loader when app is ready
+    mainWindow.once('ready-to-show', function() {
+      spinnerWindow.hide();
+      spinnerWindow = null;
+      mainWindow.show();
+    });
+  }
+
 });
