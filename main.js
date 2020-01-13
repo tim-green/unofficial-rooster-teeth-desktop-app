@@ -107,4 +107,12 @@ function loadAppWindows(showLoader) {
     });
   }
 
+  // show offline-page if no connectivity
+  mainWindow.webContents.on('did-fail-load', function(ev, errorCode, errorDesc, url) {
+    offlineWindow = new MainWindow(`file://${__dirname}/src/offline.html`, appIconPath);
+    mainWindow.hide();
+  });
+}
+
+
 });
