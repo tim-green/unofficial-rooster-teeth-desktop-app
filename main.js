@@ -34,3 +34,34 @@ const prefs = new ElectronPrefs({
 app.on('before-quit', function() {
   isQuitting = true;
 });
+
+// Initialization
+app.on('ready', () => {
+
+  // Setup icons
+  let appIcon = 'app-win.ico';
+  let trayIcon = 'tray-win.ico';
+
+  // Determine OS
+  if (Helper.isLinux()) {
+    appIcon = 'app-linux512x512.png';
+    trayIcon = 'tray-linux32x32.png';
+  }
+
+  if (Helper.isMacOS()) {
+    appIcon = 'app-mac.png';
+    trayIcon = 'tray-mac.png';
+  }
+
+  // Set Paths
+  const trayIconPath = path.join(__dirname, 'src', 'assets', trayIcon);
+  appIconPath = path.join(__dirname, 'src', 'assets', appIcon);
+
+  // Load Animation
+  loadAppWindows(c.settings.showLoader);
+
+  // create MainWindow and tray
+  setAppMenu(mainWindow);
+  tray = new AppTray(trayIconPath, mainWindow);
+
+});
