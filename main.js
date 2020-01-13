@@ -69,4 +69,14 @@ function loadAppWindows(showLoader) {
 
   // Set path for main URL
   let appPath = c.settings.appUrl;
+
+  // check shell
+  if (Helper.usePhotonKitShell()) {
+    appPath = `file://${__dirname}/src/shellMacOS.html`;
+  } else if (Helper.useWindowsShell()) {
+    appPath = `file://${__dirname}/src/shellWindows.html`;
+  } else if (Helper.useLinuxShell()) {
+    appPath = `file://${__dirname}/src/shellLinux.html`;
+  }
+
 });
