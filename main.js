@@ -79,4 +79,7 @@ function loadAppWindows(showLoader) {
     appPath = `file://${__dirname}/src/shellLinux.html`;
   }
 
+  // create mainWindow
+  mainWindow = new MainWindow(appPath, appIconPath, !showLoader);
+
 });
