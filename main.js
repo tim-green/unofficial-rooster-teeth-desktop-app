@@ -29,3 +29,8 @@ const prefs = new ElectronPrefs({
     }
   }
 });
+
+// before-quit listener
+app.on('before-quit', function() {
+  isQuitting = true;
+});
