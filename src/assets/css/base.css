@@ -6,10 +6,12 @@ html, body {
 }
 body {
     margin: 0;
+    color: #fff;
 }
 p {
     font-size: medium;
     margin: 0 0 10px 0;
+    font-weight: bold
 }
 p.large {
     font-size: large;
@@ -33,6 +35,7 @@ p.large {
 }
 
 #refresh img {
-    transform: scale(2);
+    transform: scale(1);
+    filter: invert(1);
     margin-bottom: 30px;
 }
