@@ -22,7 +22,7 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "devDependencies": {
-    "electron": "^1.1.8",
+    "electron": "^7.1.8",
     "electron-builder": "^21.2.0",
     "electron-icon-maker": "0.0.4",
     "jshint": "^2.10.0"
@@ -48,9 +48,6 @@
       "target": [
         {
           "target": "dmg"
-        },
-        {
-          "target": "mas"
         }
       ],
       "icon": "build/icons/mac/icon.icns"
