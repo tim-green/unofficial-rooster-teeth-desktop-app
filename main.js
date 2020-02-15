@@ -63,8 +63,8 @@ app.on('ready', () => {
   loadAppWindows(c.settings.showLoader);
 
   // create MainWindow and tray
-  setAppMenu(mainWindow);
-  tray = new AppTray(trayIconPath, mainWindow);
+  // setAppMenu(mainWindow);
+  // tray = new AppTray(trayIconPath, mainWindow);
 
     /* create TouchBar for macOS
   if (Helper.useTouchBar()) {

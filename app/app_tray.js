@@ -9,6 +9,7 @@ let sidebarCollapsed = false;
 // Tray Icon
 class AppTray extends Tray {
 
+  //iconPath, 
   constructor(iconPath, mainWindow) {
     super(iconPath);
     this.mainWindow = mainWindow;
