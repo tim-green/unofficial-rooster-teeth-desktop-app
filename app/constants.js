@@ -14,7 +14,7 @@ const Constants = {
     userAgentPostfixLinux: 'LinuxApp',
     windowBackgroundColor: '#101010',
     themeColor: '#1d1d1d',
-    titleBarStyle: 'hidden',
+    titleBarStyle: 'hidden-inset',
     showLoader: false,
     frame: true,
     usePhotonKitShell: false,
