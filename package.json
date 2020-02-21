@@ -14,7 +14,7 @@
     "test": "jshint main.js",
     "electron": "electron .",
     "start": "./node_modules/.bin/electron .",
-    "icon-gen": "electron-icon-maker --input=./src/assets/images/icon_1024.png --output=./build",
+    "icon-gen": "electron-icon-maker --input=./src/assets/images/rooster_teeth_icon_1100.png --output=./build",
     "generate": "yarn icon-gen",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
