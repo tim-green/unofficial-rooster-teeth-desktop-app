@@ -11,8 +11,8 @@ class MainWindow extends BrowserWindow {
 
     // create options object
     const options = {
-      width: 1200,
-      height: 800,
+      width: 4320,
+      height: 1280,
       title: c.settings.appName,
       icon: iconPath,
       titleBarStyle: c.settings.titleBarStyle,
