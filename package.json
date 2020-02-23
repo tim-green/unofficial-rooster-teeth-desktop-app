@@ -3,7 +3,7 @@
   "productName": "Rooster Teeth Unofficial App",
   "description": "Unofficial Desktop App for Rooster Teeth",
   "repository": "https://github.com/tim-green/unofficial-rooster-teeth-desktop-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "GPL-3.0-only",
   "author": {
     "name": "Tim Green",
