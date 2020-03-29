@@ -6,7 +6,7 @@ Hello there, this is an unofficial desktop app, I'm just a huge fan of Rooster T
 
 Before you ask I do not work for Rooster Teeth and this isn't a attempt to get Rooster Teeth attention to see if I could work for them.
 
-And if any employee(s) of Rooster Teeth see this repo and especially if you are in the engineering department at Rooster Teeth you are more than welcome to clone this project and improve it or do what ever.
+And if any employee(s) of Rooster Teeth see this repo and especially if you are in the engineering department at Rooster Teeth you are more than welcome to clone this project and improve it or do whatever with it.
 
 #### Once again this is unofficial desktop app of Rooster Teeth
 
