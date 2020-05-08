@@ -2,6 +2,7 @@
 const Constants = {
 
   // Internal Settings
+  // RTGreeny
   settings: {
     appName: 'RoosterTeeth',
     appUrl: 'https://www.roosterteeth.com',
