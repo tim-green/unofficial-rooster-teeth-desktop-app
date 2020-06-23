@@ -51,7 +51,7 @@ app.on('ready', () => {
   }
 
   if (Helper.isMacOS()) {
-    appIcon = 'app-mac.png';
+    appIcon = '/images/rooster_teeth_icon_1100.png';
     trayIcon = 'tray-mac.png';
   }
 
