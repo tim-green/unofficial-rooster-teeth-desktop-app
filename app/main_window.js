@@ -42,6 +42,9 @@ class MainWindow extends BrowserWindow {
     // CSS Customization
     this.webContents.on('dom-ready', function() {
 
+      // updated outline on focus to not be there
+      this.webContents.insertCSS(':focus {outline: 0}');
+
       // hide vertical scrollbar
       this.webContents.insertCSS('::-webkit-scrollbar { display: none !important;}');
 
