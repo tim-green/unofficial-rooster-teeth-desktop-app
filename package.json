@@ -22,7 +22,7 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "devDependencies": {
-    "electron": "^10.1.0",
+    "electron": "^10.1.1",
     "electron-builder": "^22.8.0",
     "electron-icon-maker": "0.0.5",
     "jshint": "^2.12.0"
