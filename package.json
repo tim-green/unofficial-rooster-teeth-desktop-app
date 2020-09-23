@@ -3,7 +3,7 @@
   "productName": "Rooster Teeth Unofficial App",
   "description": "Unofficial Desktop App for Rooster Teeth",
   "repository": "https://github.com/tim-green/unofficial-rooster-teeth-desktop-app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "GPL-3.0-only",
   "author": {
     "name": "Tim Green",
@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "electron": "^10.1.2",
-    "electron-builder": "^22.8.0",
     "electron-builder": "^22.8.1",
     "electron-icon-maker": "0.0.5",
     "jshint": "^2.12.0"
